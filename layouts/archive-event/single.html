@@ -1,0 +1,20 @@
+{{ partial "header" .}}
+{{.Title}}
+<br>
+{{.Date}}<br><br>
+{{ .Params.domain }}<br><br>
+{{ .Params.adress }}<br><br>
+{{ .Params.description }}<br><br>
+{{ .Params.img }}<br><br>
+{{ .Params.important }}<br><br>
+{{.Content}}
+<ul class="upcoming-events">
+        {{ range where .Data.Pages.ByDate "Section" "events" }}
+          {{ if ge .Date.Unix now.Unix }}
+            <li>
+              <span>{{ .Params.when.Format "2 January 13:04" }}</span>
+              — {{ .Title }}
+            </li>
+          {{ end }}
+        {{ end }}
+        </ul>

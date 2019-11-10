@@ -1,0 +1,48 @@
+
+<html>
+<body>
+  
+<p>{{ partial "header.html" . }} 
+
+  <!--Effectue  une  boucle  sur  TOUTES  les  pages du site  -->
+  {{  range .Site.RegularPages.ByParam "when"}}
+  <!-- SI la page  est un post  -->
+  {{ if eq .Type "events"  }}
+  {{ if le (dateFormat "2006 01 02" now) (dateFormat "2006 01 02" .Params.when)  }}
+  
+  
+  
+  <div style="border: 1px solid black;margin: 10px; 
+  padding: 10px;">
+  <h2 ><a href="{{ .Permalink  }}">
+      {{ .Title }}</a></h2>
+      
+      
+            <h3> 
+        
+              {{ .Description }} <br><br>
+              {{ .Params.when }}<br><br>
+              {{ .Params.label }}<br><br>
+              <img src= "{{ .Params.img}}"><br><br>
+              
+              
+              
+  
+  
+      </h3>
+     
+  </div>
+  {{end}}
+      {{ end }}
+      <!-- Fin if -->
+      {{ end }}
+      <!-- Fin  range  -->
+          {{ partial "footer.html" . }}
+  </p>
+
+     
+             </body>
+              </html>
+         
+
+

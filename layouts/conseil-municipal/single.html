@@ -1,0 +1,9 @@
+{{ partial "header.html" . }} 
+{{.Title}}
+<br>
+{{.Date}}<br><br>
+{{ .Params.firstNames }}<br><br>
+{{ .Params.lastName }}<br><br>
+{{ .Params.role }}<br><br>
+<img src= "{{ .Params.img}}"><br><br>
+{{.Content}}

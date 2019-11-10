@@ -1,0 +1,26 @@
+
+
+
+
+{{ partial "header" .}}
+<div style="border: 1px solid white; margin: 10px; 
+    padding: 10px;">
+    
+   
+     {{ range .Pages }}
+     
+          
+     <a href="{{ .Permalink  }}">{{.Title}}</a> <br><br>
+               
+               {{ .Params.when }}<br><br>
+               {{.Content}}<br><br>
+               <img src= "{{ .Params.img}}"> <br><br>
+               </div>
+               <br><br><br><abbr>
+               
+          
+               {{end}}
+               
+          
+              
+         

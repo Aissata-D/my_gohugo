@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!--
+<html lang = " en " >
+<head>
+<meta charset = " UTF -8 " >
+<meta name = " viewport " content = " width = device - width , initial - scale =1.0 " >
+<meta http - equiv = "X - UA - Compatible " content = " ie = edge " >
+<link rel="stylesheet" href ="/css/style.css">
+<title> La mairie </title >
+</head>
+
+{{ partial "head.html" . }}
+<body>
+
+<div>in
+<h1 style="text-align: center";>Hello  World !</h1>
+
+{{ partial "header.html" . }}-->
+<!--
+
+
+ Effectue  une  boucle  sur  TOUTES  les  pages du site  -->
+<!--{{  range  first 20 .Data.Pages }}
+!-- SI la page  est un post  --
+{{ if eq .Type "events"  }}
+
+<div style="border: 1px solid black;margin: 10px; 
+padding: 10px;">
+<h2 ><a href="{{ .Permalink  }}">
+    {{ .Title }}</a></h2>
+    <h3> {{ .Date }}<br><br>
+    
+            {{ .Description }} <br><br>
+            {{ .Params.when }}<br><br>
+            {{ .Params.label }}<br><br>
+            {{ .Params.img }}<br><br>
+            
+            
+
+
+    </h3>
+    <p> 
+        gf
+        </p>
+</div>
+
+    {{ end }}
+    !-- Fin if --
+    {{ end }}
+    !-- Fin  range  --
+
+
+
+
+ </div>
+ 
+ {{ partial "footer" . }}
+</body>
+</html>-->
+{{ partial "head.html" . }} 
+
+<body>
+<p>{{ partial "header.html" . }} 
+
+    <!--Effectue  une  boucle  sur  TOUTES  les  pages du site  -->
+    {{  range .Site.RegularPages.ByParam "when"}}
+    <!-- SI la page  est un post  -->
+    {{ if eq .Type "events"  }}
+    {{ if le (dateFormat "2006 01 02" now) (dateFormat "2006 01 02" .Params.when)  }}
+    
+    
+    
+    <div style="border: 1px solid black;margin: 10px; 
+    padding: 10px;">
+    <h2 ><a href="{{ .Permalink  }}">
+        {{ .Title }}</a></h2>
+        
+        
+              <h3> 
+          
+                {{ .Description }} <br><br>
+                {{ .Params.when }}<br><br>
+                {{ .Params.label }}<br><br>
+                <img src= "{{ .Params.img}}"> <br><br>
+                
+              </h3>
+       
+    </div>
+    {{end}}
+        {{ end }}
+        <!-- Fin if -->
+        {{ end }}
+        <!-- Fin  range  -->
+            {{ partial "footer.html" . }}
+
+    </p>
+</body>

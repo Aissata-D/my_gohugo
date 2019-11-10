@@ -1,0 +1,15 @@
+
+<ul class="navul">
+    <li.btn style="text-decoration: none";><a style="font-size:40px;" href="/" class="nav">Accueil</a></li>
+    <br>
+    <br>
+    {{ range .Site.Menus.mainmenu }}
+    <li.btn style="text-decoration: none";>
+        <a style="font-size:20px;"  href="{{ .URL }}" class="nav">{{ .Name }}</a>
+        {{ end}}
+    
+        
+    </li>
+   
+</ul>
+

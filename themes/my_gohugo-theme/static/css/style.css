@@ -1,0 +1,45 @@
+.nav {
+    text-decoration: none;
+    size: 2em;
+    color: black;
+}
+body{
+    background-color: bisque;
+}
+    li.btn { 
+        text-decoration: none;
+}
+.navul {
+    display: inline-block;
+}
+#event-list{
+    border: 20px; 
+    margin: 2px;
+    padding: 10px;
+}
+
+  
+div.menu{
+    border: 10px;
+    margin: 2px;
+    padding: 40px;
+    background-color: brown;}
+/*
+nav.menu ul li.btn{
+    display: inline-block;
+    list-style-type: none;
+    color: brown;
+    text-decoration: none;
+
+}
+nav.menu ul li.btn a{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+nav.menu ul li.btn:hover a{
+    background-color: darkblue;
+    transition: 0.3s all;
+}
+*/

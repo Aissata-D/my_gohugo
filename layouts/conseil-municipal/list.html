@@ -1,0 +1,24 @@
+
+
+
+<html>
+<body>
+          {{ partial "header" . }} 
+         
+
+     {{ range .Pages }}
+          <div style="border: 1px solid black; margin:10px; padding:10px";>
+               
+       <a style="font-size:20px;" href="{{ .Permalink  }}">{{.Title}}</a>
+               
+          
+          <br><br>{{ .Params.firstNames }}<br><br>
+               {{ .Params.lastName }}<br><br>
+               {{ .Params.role }}<br><br>
+               <img src= "{{ .Params.img}}"> <br><br> 
+               {{.Content}}
+              </div>
+               {{end}}
+              </body>
+              </html>
+         

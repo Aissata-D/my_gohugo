@@ -1,0 +1,8 @@
+baseURL = "http://townhall.com/"
+languageCode = "en-us"
+title = "Town hall mairie lyon"
+theme = "my_gohugo-theme"
+themesDir ="./themes"
+
+sectionPagesMenu = "mainmenu"
+
