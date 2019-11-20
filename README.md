@@ -1,6 +1,7 @@
-$ my_gohugo
+$ cd my_gohugo
 $ hugo server -D
 
+EXPLICATION
 
 Clonner le projet et ouvrez-le dans votre cmd (terminal)
 tapez hugo server -D
