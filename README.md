@@ -1,9 +1,8 @@
-$ cd my_gohugo
-$ hugo server -D
+$ cd my_gohugo                          $ hugo server -D
 
 EXPLICATION
 
-Clonner le projet et ouvrez-le dans votre cmd (terminal)
+Clonner le projet et ouvrez-le dans votre cmd (terminal);
 tapez hugo server -D
 puis ouvrez le lien pour acceder au site web
 
